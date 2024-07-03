@@ -21,5 +21,12 @@ with app.app_context():
         price=25.98,
     )
 
-    db.session.add_all([aloe, zz_plant])
+    monstra = Plant(
+    id=3,
+    name="Monstra",
+    image="https://i.pinimg.com/236x/0d/62/8d/0d628dbab4b995b5b3422bdcce85a6cc.jpg",
+    price=35.98,
+    )
+
+    db.session.add_all([aloe, zz_plant,monstra])
     db.session.commit()
